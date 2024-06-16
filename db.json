@@ -1,0 +1,32 @@
+{
+  "produto": [
+    {
+      "id": 1,
+      "produto": "PS5",
+      "valor": "R$ 3.499,99",
+      "quantidade": "1",
+      "foto": "https://images.kabum.com.br/produtos/fotos/238671/console-sony-playstation-5_1634132554_g.jpg"
+    },
+    {
+      "id": 2,
+      "produto": "PS3",
+      "valor": "R$ 499,99",
+      "quantidade": "1",
+      "foto": "https://cdn.awsli.com.br/2500x2500/1417/1417526/produto/56059028/console-ps3-supe-ghvr3dfg1y.jpg"
+    },
+    {
+      "id": 3,
+      "produto": "Controle de PS5",
+      "valor": "R$ 549,99",
+      "quantidade": "3",
+      "foto": "https://lojaibyte.vteximg.com.br/arquivos/ids/392134-1200-1200/CONTROLE-PS5-PRETO.jpg?v=637904685912600000"
+    },
+    {
+      "id": "b342",
+      "produto": "Teste",
+      "valor": "50",
+      "quantidade": "5",
+      "foto": "https://cdn-icons-png.flaticon.com/512/1170/1170679.png"
+    }
+  ]
+}
