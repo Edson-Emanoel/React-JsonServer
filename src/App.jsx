@@ -6,7 +6,7 @@ function App() {
 
   const url = "http://localhost:3000/produto"
 
-  const [ id, setId ] = useState('')
+  const [ idData, setIdData ] = useState('')
   const [ produto, setProduto ] = useState("")
   const [ valor, setValor ] = useState()
   const [ quantidade, setQuantidade ] = useState()
@@ -19,18 +19,13 @@ function App() {
   // Carrega os Dados no JSON
   useEffect(() => {
     axios.get(url)
-         .then( res => setData(res.data))
+    .then( res => setData(res.data))
+
+    console.log(data[0].id);
   }, [data, setData])
 
-  // Cadastra os Dados no JSON
-  const Inserir = () => {
-    axios.post(url, {
-      produto, valor, quantidade, foto
-    })
-  }
-
   // Confirma se os Campos foram preenchidos
-  const Cadastrar = (e) => {
+  const Validar = (e) => {
     e.preventDefault()
 
     if (produto === '') {
@@ -49,6 +44,13 @@ function App() {
     }
   }
 
+  // Cadastra os Dados no JSON
+  const Inserir = () => {
+    axios.post(url, {
+      produto, valor, quantidade, foto
+    })
+  }
+
   // 
 
   // Corpo da Página(HTML)
@@ -57,7 +59,7 @@ function App() {
 
       <h2 className='mt-5 mb-3 text-center'>Criar Produtos</h2>
 
-      <form className='mb-3'onSubmit={Cadastrar} > 
+      <form className='mb-3'onSubmit={Validar} > 
         <div className="row mb-3">
           <div className="col">
             <input
